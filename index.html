@@ -4,20 +4,53 @@
   <meta charset="utf-8">
   <title>Base Apparel | Coming Soon</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kumbh+Sans:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Josefin Sans', sans-serif;
+    }
+    #header {
+      letter-spacing: 10px;
+    }
+    .light-pink {
+      color:  hsl(0, 36%, 70%);
+    }
+  </style>
 </head>
 <body>
   <div class="d-flex justify-content-between">
-    <div class="container px-5 mx-5 d-flex flex-column justify-content-around">
-      <img src="./images/logo.svg" alt="logo" class="img-float w-50 pt-5">
-      <h1 class="text-secondary">WE'RE<br><span class="text-dark font-weight-bold">COMING<br>SOON</span></h1>
-      <p class="">Hello fellow shoppers! We are currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
-      <div class="row position-relative">
+    <div class="container px-5 m-5 d-flex flex-column justify-content-around">
+      <img src="./images/logo.svg" alt="logo" class="img-float w-25 py-5">
+      <h1 class="light-pink" id="header">WE'RE<br><span class="text-dark font-weight-bold">COMING<br>SOON</span></h1>
+      <h5 class="light-pink">Hello fellow shoppers! We are currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</h5>
+      <form class="row p-3" onsubmit="return validateForm()">
+        <label for="email"></label>
         <input type="email" class="form-control col-9 rounded-pill" id="email" placeholder="Email Adress">
-        <button type="submit" class="btn btn-primary btn-block col-3 rounded-pill position-absolute" style="left: 30vw; background-color: ;">></button>
-      </div>
+        <button type="submit" class="btn btn-primary btn-block col-3 rounded-pill" style="left: -3vw; background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%)); border: none;">></button>
+        <div class="error p-2" style="display: none; color: red;">Please provide a valid email address</div>
+      </form>
     </div>
     <img src="./images/hero-desktop.jpg" alt="hero desktop" class="img-float w-75">
   </div>
+  <script>
+    var form = document.querySelector('form');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      var email = form.email.value;
+      if (!isValidEmail(email)) {
+      // Display an error message
+        document.querySelector('.error').style.display = 'block';
+      } else {
+      // Submit the form
+        form.submit();
+      }
+    });
+    function isValidEmail(email) {
+      // Check if the email address is valid
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+  </script>
 </body>
 </html>
