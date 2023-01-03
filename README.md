@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [](https://github.com/teobidzishvili/base-apparel)
-- Live Site URL: [](https://teobidzishvili.github.io/base-apparel/)
+- [Solution URL](https://github.com/teobidzishvili/base-apparel)
+- [Live Site URL](https://teobidzishvili.github.io/base-apparel/)
 
 ## My process
 
