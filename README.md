@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [](https:)
-- Live Site URL: [](https:)
+- Solution URL: [](https://github.com/teobidzishvili/base-apparel)
+- Live Site URL: [](https://teobidzishvili.github.io/base-apparel/)
 
 ## My process
 
@@ -55,8 +55,8 @@ Users should be able to:
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) -
-- [Example resource 2](https://www.example.com) - 
+- [chatGPT](https://openai.com/blog/chatgpt/) -
+- []() - 
 
 ## Acknowledgments
 
