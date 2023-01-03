@@ -25,10 +25,10 @@
       <img src="./images/logo.svg" alt="logo" class="img-float w-25 py-5">
       <h1 class="light-pink" id="header">WE'RE<br><span class="text-dark font-weight-bold">COMING<br>SOON</span></h1>
       <h5 class="light-pink">Hello fellow shoppers! We are currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</h5>
-      <form class="row p-3" onsubmit="return validateForm()">
+      <form class="row p-3">
         <label for="email"></label>
         <input type="email" class="form-control col-9 rounded-pill" id="email" placeholder="Email Adress">
-        <button type="submit" class="btn btn-primary btn-block col-3 rounded-pill" style="left: -3vw; background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%)); border: none;">></button>
+        <button type="submit" class="btn btn-primary btn-block col-3 rounded-pill" style="left: -3vw; background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%)); border: none;" onclick="changeColor(this)">></button>
         <div class="error p-2" style="display: none; color: red;">Please provide a valid email address</div>
       </form>
     </div>
@@ -50,6 +50,9 @@
     function isValidEmail(email) {
       // Check if the email address is valid
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+    function changeColor(element) {
+      element.style.background = 'linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%))';
     }
   </script>
 </body>
