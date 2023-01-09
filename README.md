@@ -55,7 +55,7 @@ Users should be able to:
 
 ### Useful resources
 
-- [chatGPT](https://openai.com/blog/chatgpt/) -
+- [chatGPT](https://openai.com/blog/chatgpt/)
 - []() - 
 
 ## Acknowledgments
